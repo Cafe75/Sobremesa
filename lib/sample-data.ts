@@ -55,7 +55,7 @@ export const articles: Article[] = [
     title: 'Houston ya es la capital de la cocina latina en Estados Unidos',
     dek: 'Chefs de Monterrey, Caracas y Bogotá están llevando la comida de su casa a los mejores comedores de la ciudad.',
     body: 'Pregúntale a alguien de Houston dónde comer y la respuesta casi nunca viene con código de vestimenta. Viene con una dirección, un plato que hay que pedir y el nombre de quien lo cocina.\n\nLo que cambió no es la comida, que lleva décadas siendo extraordinaria, sino quién la cocina y dónde.',
-    author: 'Inés Robledo', image_url: null, sponsor_id: null, sponsor_format: null, published_at: '2026-09-12',
+    author: 'Inés Robledo', image_url: '/images/taco-portada.jpg', sponsor_id: null, sponsor_format: null, published_at: '2026-09-12',
   },
   {
     id: 'a2', edition_slug: 'houston', slug: 'fuego-vivo', kind: 'guia',

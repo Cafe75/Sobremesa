@@ -48,7 +48,8 @@ button, input, select { font-family: inherit; }
 
 /* Fotos de ejemplo: composiciones de mesa vistas desde arriba */
 .photo { position: relative; overflow: hidden; background-color: #2b302d; }
-.photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.photo.has-img::after { display: none; }
+.photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 55% 55%; }
 .photo.v0 { background:
   radial-gradient(circle at 47% 45%, #7c9a57 0 .9%, transparent 1.1%),
   radial-gradient(circle at 53% 51%, #7c9a57 0 .7%, transparent .9%),
