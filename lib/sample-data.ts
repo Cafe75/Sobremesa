@@ -16,6 +16,18 @@ export const sponsors: Sponsor[] = [
 
 export const restaurants: Restaurant[] = [
   {
+    id: 'r3', edition_slug: 'houston', slug: 'la-ceiba', name: 'La Ceiba',
+    cuisine: 'Cocina venezolana de autor', neighborhood: 'The Heights', price_level: 3,
+    address: 'The Heights, Houston, TX', hours: 'Miércoles a domingo, 5 a 10 pm',
+    good_for: 'Parejas y cenas tranquilas', reservation_url: null, image_urls: [], is_featured: false,
+  },
+  {
+    id: 'r4', edition_slug: 'houston', slug: 'marea-alta', name: 'Marea Alta',
+    cuisine: 'Mariscos del Golfo y cebichería', neighborhood: 'Upper Kirby', price_level: 3,
+    address: 'Upper Kirby, Houston, TX', hours: 'Martes a domingo, 12 a 10 pm',
+    good_for: 'Almuerzos largos', reservation_url: null, image_urls: [], is_featured: false,
+  },
+  {
     id: 'r1', edition_slug: 'houston', slug: 'maiz-y-brasa', name: 'Maíz y Brasa',
     cuisine: 'Cocina mexicana contemporánea', neighborhood: 'Montrose', price_level: 4,
     address: 'Westheimer Road, Montrose, Houston, TX', hours: 'Martes a sábado, 5:30 a 10:30 pm',
@@ -51,6 +63,20 @@ export const articles: Article[] = [
     dek: 'Parrillas argentinas, asadores mexicanos y hornos de leña donde la brasa es la protagonista.',
     body: 'En Houston la carne asada nunca fue una moda: es una costumbre de domingo. Lo nuevo es que una generación de cocineros latinos está tratando el fuego con precisión de alta cocina.\n\nVisitamos cada lugar al menos dos veces y pagamos todas las comidas. La marca que presenta esta guía no participó en la selección.',
     author: 'Marcus Greene', image_url: null, sponsor_id: 's1', sponsor_format: 'presentado', published_at: '2026-09-10',
+  },
+  {
+    id: 'a4', edition_slug: 'houston', slug: 'arepas-de-verdad', kind: 'guia',
+    title: 'Dónde comer arepas, cachapas y pabellón de verdad',
+    dek: 'La diáspora venezolana convirtió a Houston en una de sus mejores mesas fuera de casa.',
+    body: 'Hace diez años había que manejar media hora para encontrar una arepa decente.\n\nHoy la conversación es otra.',
+    author: 'Ana Beltrán', image_url: null, sponsor_id: null, sponsor_format: null, published_at: '2026-09-07',
+  },
+  {
+    id: 'a5', edition_slug: 'houston', slug: 'cebiche-golfo', kind: 'reportaje',
+    title: 'El cebiche peruano descubre el pescado del Golfo',
+    dek: 'Cocineros limeños están cambiando la corvina por huachinango y los resultados sorprenden.',
+    body: 'El limón tiene que ser ácido, el pescado tiene que ser del día.\n\nLo demás es conversación.',
+    author: 'Marcus Greene', image_url: null, sponsor_id: null, sponsor_format: null, published_at: '2026-09-05',
   },
   {
     id: 'a3', edition_slug: 'houston', slug: 'origen-del-plato-1', kind: 'reportaje',

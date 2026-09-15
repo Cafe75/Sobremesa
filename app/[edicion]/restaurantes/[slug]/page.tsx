@@ -24,59 +24,59 @@ export default async function RestaurantPage({ params }: Props) {
   return (
     <>
       <SiteHeader edition={edition} editions={editions} />
-      <main className="wrap" style={{ paddingTop: 36 }}>
-        <p className="meta"><Link href={`/${edition.slug}`}>{edition.city}</Link> / {r.neighborhood}</p>
-        <div className="gallery">
-          <Photo src={img0} alt={r.name} variant={1} />
-          <div className="side">
-            <Photo src={img1} alt={r.name} />
-            <Photo src={img2} alt={r.name} variant={2} />
-          </div>
+      <main>
+        <div className="r-gallery">
+          <Photo src={img0} alt={r.name} variant={0} priority />
+          <Photo src={img1} alt={r.name} variant={1} />
+          <Photo src={img2} alt={r.name} variant={3} />
         </div>
-
-        <div className="two">
-          <div>
-            <h1 style={{ fontSize: 60 }}>{r.name}</h1>
-            <p style={{ fontSize: 16, color: 'var(--muted)', margin: '12px 0 32px' }}>
-              {r.cuisine} en {r.neighborhood}, {priceLabel(r.price_level)}
-              {r.is_featured && <span className="sponsor" style={{ marginLeft: 12 }}>Destacado</span>}
-            </p>
-            {r.review ? (
-              <>
-                <div style={{ borderTop: '1px solid var(--ink)', paddingTop: 22, marginBottom: 26 }}>
-                  <span className="label">Nuestra opinión</span>
-                  <p style={{ fontFamily: 'var(--font-serif), Georgia, serif', fontSize: 25, lineHeight: 1.4 }}>{r.review.verdict}</p>
-                </div>
-                <div className="body"><Paragraphs text={r.review.body} /></div>
-                <p className="meta">
-                  Reseña de {r.review.author}, {formatDate(r.review.published_at)}. Sobremesa paga todas sus comidas.
-                </p>
-              </>
-            ) : (
-              <p className="meta">Todavía no hemos reseñado este restaurante.</p>
-            )}
+        <div className="wrap">
+          <div className="r-head">
+            <div>
+              <p className="meta" style={{ marginBottom: 14 }}>
+                <Link href={`/${edition.slug}#restaurantes`}>{edition.city}</Link> / {r.neighborhood}
+                {r.is_featured && <span className="sponsor" style={{ marginLeft: 12 }}>Destacado</span>}
+              </p>
+              <h1>{r.name}</h1>
+            </div>
+            <div className="facts">
+              <span className="price">{priceLabel(r.price_level)}</span><br />
+              {r.cuisine}<br />{r.neighborhood}
+            </div>
           </div>
-          <aside>
-            <div className="box" style={{ position: 'sticky', top: 24 }}>
-              <h3>Reservar</h3>
-              {r.reservation_url ? (
+
+          <div className="two" style={{ paddingBottom: 96 }}>
+            <div>
+              {r.review ? (
                 <>
-                  <a href={r.reservation_url} target="_blank" rel="noopener noreferrer" className="btn dark" style={{ width: '100%' }}>
-                    Reservar mesa
-                  </a>
-                  <p className="meta" style={{ marginTop: 8, fontSize: 12 }}>Te llevamos al sistema de reservas del restaurante.</p>
+                  <p className="verdict">{r.review.verdict}</p>
+                  <p className="meta" style={{ marginBottom: 8 }}>Reseña de {r.review.author}, {formatDate(r.review.published_at)}</p>
+                  <div className="body" style={{ paddingTop: 24 }}><Paragraphs text={r.review.body} /></div>
+                  <p className="meta">Sobremesa paga todas sus comidas y nunca acepta pagos por reseñas.</p>
                 </>
               ) : (
-                <p className="meta">Este restaurante no toma reservas en línea.</p>
+                <p className="verdict" style={{ color: 'var(--muted)' }}>Todavía no hemos reseñado este restaurante.</p>
               )}
-              <div className="info" style={{ marginTop: 18 }}>
-                {r.address && <p><b>Dirección</b>{r.address}</p>}
-                {r.hours && <p><b>Horario</b>{r.hours}</p>}
-                <p><b>Precio</b>{priceLabel(r.price_level)}</p>
-                {r.good_for && <p><b>Ideal para</b>{r.good_for}</p>}
-              </div>
             </div>
-          </aside>
+            <aside style={{ paddingTop: 48 }}>
+              <div className="box" style={{ position: 'sticky', top: 24 }}>
+                <h3>Reservar</h3>
+                {r.reservation_url ? (
+                  <>
+                    <a href={r.reservation_url} target="_blank" rel="noopener noreferrer" className="btn dark" style={{ width: '100%' }}>Reservar mesa</a>
+                    <p className="meta" style={{ marginTop: 8, fontSize: 12 }}>Te llevamos al sistema de reservas del restaurante.</p>
+                  </>
+                ) : (
+                  <p className="meta">Este restaurante no toma reservas en línea.</p>
+                )}
+                <div className="info" style={{ marginTop: 18 }}>
+                  {r.address && <p><b>Dirección</b>{r.address}</p>}
+                  {r.hours && <p><b>Horario</b>{r.hours}</p>}
+                  {r.good_for && <p><b>Ideal para</b>{r.good_for}</p>}
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </main>
       <SiteFooter />
