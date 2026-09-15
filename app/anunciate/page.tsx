@@ -33,7 +33,7 @@ export default async function Advertise() {
         </section>
 
         <section className="wrap section">
-          <h2 style={{ fontSize: 'clamp(36px, 4.5vw, 56px)', marginBottom: 32 }}>Tres formas de colaborar</h2>
+          <h2 style={{ fontSize: 'clamp(28px, 3vw, 40px)', marginBottom: 32 }}>Tres formas de colaborar</h2>
           <div className="formats">
             {formats.map((f) => (
               <div key={f.name}>
@@ -49,8 +49,8 @@ export default async function Advertise() {
         <section className="wrap section" style={{ paddingBottom: 96 }}>
           <div className="two">
             <div>
-              <h2 style={{ fontSize: 'clamp(36px, 4.5vw, 56px)', marginBottom: 20 }}>Nuestras reglas</h2>
-              <p style={{ fontFamily: 'var(--serif)', fontSize: 22, lineHeight: 1.65, color: 'var(--muted)', maxWidth: '40ch' }}>
+              <h2 style={{ fontSize: 'clamp(28px, 3vw, 40px)', marginBottom: 20 }}>Nuestras reglas</h2>
+              <p style={{ fontFamily: 'var(--serif)', fontSize: 19, lineHeight: 1.65, color: 'var(--muted)', maxWidth: '40ch' }}>
                 Todo contenido pagado se identifica. Las reseñas y recomendaciones nunca están a la venta. Solo trabajamos con marcas que un buen cocinero querría tener en su cocina.
               </p>
             </div>

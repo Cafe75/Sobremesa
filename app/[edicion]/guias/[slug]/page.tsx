@@ -56,7 +56,7 @@ export default async function ArticlePage({ params }: Props) {
                 <Link key={a.id} href={`/${edition.slug}/guias/${a.slug}`} className="big card-link">
                   <Photo src={a.image_url} alt={a.title} variant={i ? 3 : 1} style={{ aspectRatio: '3 / 2' }} />
                   {a.sponsor && <SponsorLabel article={a} style={{ display: 'block', marginTop: 18 }} />}
-                  <h3 style={{ fontSize: 30 }}>{a.title}</h3>
+                  <h3 style={{ fontSize: 24 }}>{a.title}</h3>
                 </Link>
               ))}
             </div>
